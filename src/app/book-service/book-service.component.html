@@ -1,0 +1,275 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container">
+    
+        <div class="row">
+            <div class="col-sm-6">
+            <div class="p-profile"></div>
+            </div>
+            <div class="col-sm-6">
+                        
+           <div class="row mt-4 " >
+            <img src="assets/img/our.png"><br><br>
+            <div class="col-sm-12">
+              <br>
+                <p class=" text-justify">
+                 We provide professional services which is been handled by experience personnel in works of life. We ensure highest level 
+                    of confidentiality as our clients cases are treated with outmost decrete.
+                    <br>
+                </p>
+            </div>
+                <div class="col-md-6 ">
+                    <div class="card mb-4">
+                        <img src="assets/img/couples.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title">  <strong>MARRIGE COUNSELLING </strong> </h3>
+                          <p class="card-text text-justify">Every marriage is unique. This service is a supportive service for married couples who are facing difficulties in their marriage.
+                             Our marriage counsellor will work with singles and couples to help them gain skills that are useful in marriage.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Book an appointment below</li>
+                          
+                        </ul>
+                        <div class="card-body">
+                          <a class="btn btn-primary text-white" (click)="openEdit(contentEdit, registerPatient)">Book Now</a>
+                         
+                        </div>
+                      </div>
+                  </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="assets/img/lstn.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">  <strong>LISTENING </strong> </h3>
+                      <p class="card-text text-justify"> This service is recommended for those who are in distress, searching for meaning, or in need of direction.
+                         We provide a client -centered listening approach to your story. Our listeners are skilled professionals and will be happy to listen to what is important to you as well as leading you through the journey of life.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Book an appointment below</li>
+                      
+                    </ul>
+                    <div class="card-body">
+                      <a  class="btn btn-primary text-white" (click)="openEdits(contentEdit, registerPatient)">Book Now</a>
+                     
+                    </div>
+                  </div>
+              </div>
+            <div class="col-md-6" >
+                <div class="card">
+                    <img src="assets/images/spiritual.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">  <strong>SPIRITUAL LISTENING </strong> </h3>
+                      <p class="card-text text-justify ">This is a faith based listening service for Christians who are interested in deepening their relationship with God, want to have spiritual direction or those who want to find purpose.
+                         Spiritual listening is a deep diving service that allows you to be heard and could help you discover your unique assignment, purpose and potential in life. Our spiritual listener is a trained professional and a church Pastor with over 2 decades of experience. 
+                         </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Book an appointment below</li>
+                      
+                    </ul>
+                    <div class="card-body">
+                      <a  class="btn btn-primary text-white" (click)="openEdited(contentEdit, registerPatient)">Book Now</a>
+                    
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-6 ">
+                <div class="card" >
+                    <img src="assets/img/others3.jpg" class="card-img-top" alt="..." >
+                    <div class="card-body">
+                      
+                    <h3 class="card-title">  <strong>OTHER SERVICES </strong> </h3>
+                      <p class="card-text text-justify">
+                        You have the opportunity do discuss any boadring issues that needs professional counselling 
+                        where we can share ideas from experience and professional point of views. At thrive Consult, we make our abode a home for the homeless and ignite hope for the hopeless.
+                        We build a family whose primary interest is to uplift the depressed and re-ignite hope to the hopeless. Get in touch with us today.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Book an appointment below</li>
+                      
+                    </ul>
+                    <div class="card-body">
+                        <a [routerLink]="['/contact-us']" class="btn btn-primary">Book Now</a>
+                     
+                    </div>
+                  </div>
+              </div>
+          </div>
+         
+            </div>
+            </div>
+        
+    </div>
+  
+    </section>
+  
+    
+    <ng-template #contentEdit let-modal>
+      <div class="modal-header">
+        <h2 class="modal-tittle text-center" id="appointmentmodal">BOOK APPOINTMENT </h2>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="card">
+        <div class="modal-body">
+          <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Form has been submitted successfully. Check your Email to complete booking
+            <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        
+          <form [formGroup]="addmore"  >
+              
+              <div class="mt-50 box">
+                  <div class="form-row ">
+                    
+                      <div class="col-md-12">
+                          <div class="form-group col-md-3 col-xs-8" >
+                             
+                          </div>
+                          <div class="form-row" style="margin-top:-10px">
+                             
+                              <div class="col mb-4">
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary" id="addon-wrapping">First Name</span>
+                                      </div>
+                                  <input type="text" style="width: 165px;"  formControlName="fName" class="form-control" required  >
+                                 
+                                  </div>
+                                  <small *ngIf="addmore.get('fName').invalid && addmore.get('fName').touched" class="text-danger">First name required</small> 
+                              </div>
+                              
+                              <div class="col mb-4">
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary mb-4"   id="addon-wrapping">Middle Name</span>
+                                      </div>
+                                  <input type="text" style="width: 165px;"  formControlName="mName" class="form-control" required >
+                                  
+                                  </div> 
+                                  <small  *ngIf="addmore.get('mName').invalid && addmore.get('mName').touched" class="text-danger">Middle name is required</small>                  
+                              </div>
+                            
+                              <div class="col mb-4" >
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary " id="addon-wrapping">Last Name</span>
+                                      </div>
+                                  <input type="text" style="width: 165px;"  formControlName="lName"  class="form-control"  required>
+                                   
+                                  </div>  
+                                  <small  *ngIf="addmore.get('lName').invalid && addmore.get('lName').touched" class="text-danger">Last name is required</small>                           
+                              </div>
+  
+  
+                              <div class="col mb-4">
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text text-white bg-primary mb-4" id="addon-wrapping">Pick Date</span>
+                                    </div>
+                                <input type="date" style="width: 165px;" formControlName="date" id="date" class="form-control"required >
+                                 
+                                </div>   
+                                <small  *ngIf="addmore.get('date').invalid && addmore.get('date').touched" class="text-danger">Date is required</small>                      
+                            </div>
+  
+  
+                              </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                          <div class="form-group col-md-3 col-xs-8" >
+                              
+                             </div>
+                             
+                              <div class="form-row " style="margin-top:-10px">
+                                                        
+                              <div class="col mb-4">
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary" id="addon-wrapping">@</span>
+                                      </div>
+                                  <input type="email" style="width: 165px;"  formControlName="email"  id="email" class="form-control"placeholder="Email" required >
+                                 
+                                </div>
+                                <small  *ngIf="addmore.get('email').invalid && addmore.get('email').touched" class="text-danger">Email required</small> 
+                              </div>
+                              
+                             
+  
+                              <div class="col mb-4">
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text text-white bg-primary " id="addon-wrapping">#</span>
+                                    </div>
+                                <input type="text" style="width: 165px;"  formControlName="phone" class="form-control" placeholder="Phone Nos" required >
+                                 
+                                </div>  
+                                <small  *ngIf="addmore.get('phone').invalid && addmore.get('phone').touched" class="text-danger">Phone nos required required</small>                   
+                            </div>
+  
+  
+  
+  
+                              </div>
+                               </div>
+                                   <div class="col-md-12">
+                               <div class="form-group col-md-3 col-xs-8">
+                             
+                              </div>
+                              <div class="form-row " style="margin-top:-10px">
+                                
+                                  <div class="col d-none">
+                                           
+                                 <input type="text"  name="link" formControlName="link" id="link" class="form-control" readonly >
+                                                                   
+                              </div>
+                             
+                                <div class="col mb-4">
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary" id="addon-wrapping">Product Name</span>
+                                      </div>
+                                 <input type="text" style="width: 165px;"  name="service" formControlName="service" id="service" class="form-control" readonly>
+                              </div>
+                                                                        
+                              </div>
+  
+  
+                              <div class="col mb-4">
+                                  <div class="input-group flex-nowrap">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-white bg-primary" id="addon-wrapping">$</span>
+                                      </div>
+                                 <input type="number" style="width: 165px;"  name="amount" formControlName="amount" id="amount" class="form-control" readonly >
+                              </div>
+                                                                        
+                              </div>
+  
+                             
+                              
+                              </div>
+                            </div>
+                  
+                  </div>
+              </div>
+          
+        </form>
+    
+  
+          </div>
+          </div>
+      
+         <div class="modal-footer col-md-8">
+       
+        <button [disabled]="addmore.invalid" type="button" class="btn btn-success text-center"  (click)="onSender()" (click)="onSubmit()"   > <i class="fa fa-database"></i>Book Appointment</button> &nbsp;
+         
+        <button type="button" class="btn btn-outline-dark ml-5" (click)="clear()" (click)="closeAlert()" (click)="modal.dismiss('Cross click')"><i class="fa fa-close"></i> Close</button>
+        
+      </div>
+  </ng-template>
+  

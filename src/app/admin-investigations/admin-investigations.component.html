@@ -1,0 +1,91 @@
+<app-admin-nav>
+    
+<div class="card">
+    <form [formGroup] = "studiesForm" (ngSubmit)="onSubmit()" >
+        <div class="mt-5 box">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group mt-4" >
+                        <label>Name</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="name" class="form-control" placeholder="Enter studies name">
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Department</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <select formControlName="department" class="form-control">
+                                <option value="">-Select-</option>
+                                <option value="laboratory">Laboratory</option>
+                                <option value="pharmacy">Pharmacy</option>
+                                <option value="consultant">Consultancy</option>
+                              </select>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Price</label>
+                    </div>
+                    <div class="form-row " style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="price" class="form-control" placeholder="Enter price">
+                                               
+                        </div>
+                        
+                        
+                        </div>
+                        
+                </div>
+
+                <div class="form-row mt-4">
+                    
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-success " (click)="onSubmit()">Register Studies</button> &nbsp;
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-secondary ml-5" (click)="reset()">Reset</button>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+<div  class="col-md-8 mt-4 mb-4">
+    <div class="search">
+    <hr class="my-12"/>
+    <input type="text" name="Nname" id="Nname" class="form-control" placeholder="Search....">
+    <hr class="my-12"/>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+             <tr *ngFor="let stud of studies">
+            <td><span>{{stud.name}}</span></td>
+            <td><span>{{stud.department}}</span></td>
+            <td><span>{{stud.price}}</span></td>
+            <td>
+                <button class="btn btn-sm btn-success ml-1" (click)="openRegister(contentRegister, registerPatient)"><i class="fa fa-pencil-square-o">Edit Record</i></button>
+                <button type="button" class="btn btn-danger ml-2" (click)="removeItem(stud)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</app-admin-nav>

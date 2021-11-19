@@ -1,0 +1,14 @@
+.box{
+    width:70%;
+    border:1px solid rgb(145,138,138);
+    border-radius: 25px;
+    padding: 0px 20px 20px 20px;
+    margin-left: 200px;
+}
+
+.table{
+    margin-left: 210px;
+}
+.search{
+    margin-left: 300px;
+}

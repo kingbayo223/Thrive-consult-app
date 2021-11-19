@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+background-color:rgb(235, 244, 247);
+
+}
+.p-readmore{
+  color:#000;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.p-readmore img{
+  transform:translateX(0);
+  transition: all .5s;
+}
+.p-readmore:hover img{
+  transform:translateX(5px);
+}
+p{
+  margin: 0px;
+}
+.p-wrapper{
+  position: relative;
+
+}
+.p-wrapper::before{
+  content: '';
+  background:  #073f59 ;
+height: 260vh;
+width: 25vw;
+position: absolute;
+z-index: -1;  
+}
+
+.p-hamburger h1{
+  color: aliceblue;
+}
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+h1,h2,h3,h4,h5{
+  font-weight: 700;
+}
+.p-flex{
+  display:flex;
+}
+.p-flex-align-center{
+  align-items: center;
+}
+.p-flex-jc-sb{
+  justify-content: space-between;
+}
+
+a, a:hover{
+  text-decoration: none;
+
+}
+.p-cursor{
+  cursor: pointer;
+}
+.bay{
+  background:#073f59;
+  margin-left: 245px;
+
+}

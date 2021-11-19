@@ -1,0 +1,46 @@
+.address p{
+    font-weight: 600;
+}
+
+.main-page{
+    background:transparent;
+    margin-left: 350px;
+  width:1000px;
+  
+}
+.p-profile{
+    background: url(/assets/img/cms.jpg);
+    height: 400px;
+    width: 75%;
+    background-size: cover;
+    background-position:left;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  border-style: solid;
+   
+}
+
+.p-tag{
+  background: #073f59;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.p-des{
+    color: #0c0a0a;
+    width: 80%;
+}
+img{
+  margin-bottom: 30px;
+}
+.contained img{
+margin-left: 85px;
+}
+
+.form-control.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid{
+  border: 1px solid green;
+}

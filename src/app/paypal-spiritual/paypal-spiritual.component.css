@@ -1,0 +1,31 @@
+
+  .p-profile{
+    background: url(/assets/img/Talk.png);
+    height: 50px;
+    width: 45%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.p-tag{
+    background: #26658a;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.p-des{
+    color: #0c0a0a;
+    width: 80%;
+}
+.set{
+padding-top:inherit;
+  padding-left: 35%;
+}
+.made{
+  padding-right: 10px;
+ padding-left: 300px;
+}
+.head{
+ 
+  margin-left: 400px;
+}

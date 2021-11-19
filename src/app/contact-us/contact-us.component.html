@@ -1,0 +1,113 @@
+<app-navbar></app-navbar>
+<body class="main-page col-sm-12">
+<section > 
+    
+    <div class="container">
+        
+        <div class="row">
+          
+           
+            <img src="assets/img/cnt.jpg"  > <br><br>
+        </div>
+    </div>
+</section>
+<section class="contact"> 
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-6 ">
+               <div class="bg-primary text-white text-center mb-4"><span>Fill the form below</span></div>
+               <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success</strong> Form has been submitted successfully.
+                <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+               <form [formGroup]="addmore" >
+                    
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-6">
+                            <input type="text"  formControlName="fName" class="form-control" name="fName" id="fName" placeholder="Full name*">
+                            <small  *ngIf="addmore.get('fName').invalid && addmore.get('fName').touched" class="text-danger">Full name is required</small>
+                        </div>
+                        <div class="col d-none">
+                            <input type="email"  formControlName="email" class="form-control" name="email" id="email">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <input type="contactemail"  formControlName="contactemail" class="form-control" name="contactemail" id="contactemail" placeholder="Email*">
+                            <small  *ngIf="addmore.get('contactemail').invalid && addmore.get('contactemail').touched" class="text-danger">Email is required</small>
+                        </div>
+                    
+                    </div>
+
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text"  formControlName="phone" class="form-control" name="phone" id="phone"  placeholder="Phone Number*">
+                            <small  *ngIf="addmore.get('phone').invalid && addmore.get('phone').touched" class="text-danger">Phone nos is required</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <select  formControlName="country" class="form-control" name="country" id="country">
+                            <option value="">Choose your country</option>
+                            <option value="England">England</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Scothland">Scothland</option>
+                           </select>
+                           <small  *ngIf="addmore.get('country').invalid && addmore.get('country').touched" class="text-danger">country is required</small>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <textarea  formControlName="service" class="form-control" rows="5"></textarea>
+                        </div>
+                        <small  *ngIf="addmore.get('service').invalid && addmore.get('service').touched" class="text-danger">Make your request</small>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 text-center">
+                            
+                            <button [disabled]="addmore.invalid" type="button" class="btn btn-primary text-center"  (click)="onSender()"   > <i class="fa fa-paper-plane"></i>Send message</button> &nbsp;
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6 address">
+                <h5>Call Us / whatsApp</h5>
+                <p> <a href="tel:989899899"><i class="fa fa-phone mr-3"></i>+(91) 909090909090909</a><br>
+                </p>
+        <h5>Email/Website</h5>
+        <p>
+            <a href="mailto: thriveconsult@gmail.com"><i class="fa fa-envelope mr-3"></i>thriveconsult@gmail.com</a><br>
+            <a href="#"><i class="fa fa-globe mr-3"></i>www.thriveconsult.com</a>
+        </p>
+        <h5>Working hours</h5>
+        <p>
+            Mon - Fri : 9am -6pm(IST)
+        </p>
+        <h5>Address</h5>
+        <p>
+            Unit 55f Maple Avenue, <br>Stillorgan Industrial Park, <br>Sandyford D18 A94 F8AO   
+        </p>
+            </div>
+        </div>
+
+
+        <div class="container-fluid col-md-12">
+        
+            <div class="contained " ><img src="assets/img/locats.jpg "></div>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2385.601815119185!2d-6.220888984617717!3d53.2787537874737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sour%20service%20rouUnit%2055f%20Maple%20Avenue%20Stillorgan%20Industrial%20Park%20Sandyford%20D18%20A94%20F8AOnd%20image!5e0!3m2!1sen!2sng!4v1632150078882!5m2!1sen!2sng"
+             width="850" height="400" style="border:4%; border-radius: 5%;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+    </div>
+   
+</section>
+
+</body>

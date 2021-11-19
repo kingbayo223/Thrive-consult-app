@@ -1,0 +1,111 @@
+.p-profile{
+    background: url(/assets/img/ltk.png);
+    height: 400px;
+    width: 68%;
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  
+ 
+}
+.p-tag{
+    background: #073f59;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.p-des{
+    color: #0c0a0a;
+    width: 80%;
+}
+
+
+.profile-area{
+    padding: 80px 0;
+}
+.card{
+    box-shadow: 0 0 30px rgba(0, 0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.img1 img{
+    height: 150px;
+    border-top-right-radius:15px ;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+}
+.img2 img{
+    position:relative;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+    margin-top: -80px;
+}
+.card:hover .img2 img{
+    border-color: darkcyan;
+    transition: .7s;
+
+}
+.main-text{
+    padding: 30px 0;
+    text-align: center;
+    }
+    .main-text h2{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+    .main-text p{
+        font-size: 16px;
+        padding: 0 35px;
+    }
+    .socials{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .socials i{
+        font-size: 20px;
+        color: darkcyan;
+        padding: 0 10px;
+    }
+    .profile{
+        background-color: #26658a;
+        color: white;
+        text-transform: uppercase;
+    }
+    .card-text{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .card-title{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    input {
+        margin: 7px;
+        padding: 2px
+      }
+      
+    input.transparent-input{
+       background-color:rgba(0,0,0,0) !important;
+       border:none !important;
+    }
+.form-control.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid{
+    border: 1px solid green;
+}
+p::first-letter{
+    font-size: 200%;
+    color:  #26658a;
+    
+}
